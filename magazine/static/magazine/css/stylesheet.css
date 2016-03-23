@@ -1,0 +1,570 @@
+html {
+  font-size: 100%
+}
+body {
+	font-family: Minion Pro Regular;
+  color: #000;
+}
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('../fonts/league_gothic.eot');
+    src: url('../fonts/league_gothic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league_gothic.woff2') format('woff2'),
+         url('../fonts/league_gothic.woff') format('woff'),
+         url('../fonts/league_gothic.ttf') format('truetype'),
+         url('../fonts/league_gothic.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'futura_std';
+	src: url('../fonts/FuturaStd-Book.otf');
+}
+a {
+    color: black;
+}
+a:hover {
+    color: black;
+}
+a.underline {
+    text-decoration: underline;
+    color: black;
+}
+h1 {
+	font-family: 'league_gothicregular';
+	text-align: center;
+}
+h2 {
+	font-family: 'league_gothicregular';
+	text-align: center;
+}
+
+h3 {
+	font-family: 'league_gothicregular';
+	text-align: center;
+}
+
+p {
+	font-family: Minion Pro Regular;
+	font-size: 16px;
+  font-size: 1rem;
+	/*margin-bottom: 20px;
+	padding-bottom: 20px;
+	width: 90%;
+	margin: 0 auto;*/
+}
+
+figure {
+	text-align: center
+	;
+}
+footer{
+	margin-top:50px;
+}
+
+body{
+	color: #000;
+}
+/*for blog*/
+.blog h4 {
+    font-family: 'futura_std';
+    text-align: center;
+    font-size: 12px;
+    color: #a7a9ac;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.blog h4 a {
+	color: #a7a9ac;
+}
+
+.blog h4 a:hover {
+	color: #000;
+}
+
+.blog h3 {
+    font-family: 'futura_std';
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5; 
+}
+
+.blog h3 a {
+	text-decoration: none;
+}
+
+.blog h3 a:hover {
+	text-decoration: underline;
+}
+
+.blog p {
+	font-size: 14px;
+	line-height: 1.8;
+}
+
+.item {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.nav{
+	letter-spacing: 3px;
+}
+.affix {
+  top:0;
+  max-width: none !important;
+  width:100%;
+  background-color: white;
+  z-index: 999;
+}
+@media screen and (max-width: 946px) {
+	.affix .nav-header::before {
+	   content: "THE HARVARD ADVOCATE";
+	   float: left;
+	   display: none;
+	   padding: 15px;
+
+	}
+}
+.no-underline{
+  text-decoration: none;
+}
+.no-underline:hover{
+  text-decoration: none;
+}
+.main-title{
+  color: black;
+	font-size:45px;
+	margin:25px;
+	letter-spacing: 3px;
+}
+.main-title:hover{
+ text-decoration: none;
+
+}
+.no-decoration {
+    color: #000;
+    text-decoration: none;
+}
+
+.no-decoration:hover
+{
+    color: #000;
+    cursor:pointer;
+}
+.ad{
+	float: left;
+}
+.logo{
+	width:100px;
+	height: auto;
+}
+.social-media-link{
+	padding: 0px 5px 0px 5px;
+	border: solid 1px #000;
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+.preview-image{
+	width:300px;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.resize-image { max-width: 418px; height: 240px; overflow: hidden; }
+.resize-image img { width: 100%; }
+
+.header-image{
+  width: 100%;
+  padding-bottom: 20%;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.header-video{
+
+}
+.blog-title{
+
+}
+.blog-header-image{
+	padding-bottom: 1%;
+}
+.anniversary-text{
+  text-align: center;
+}
+.middle-right-ad{
+  position: fixed;
+  right: 0px;
+ /* width: 120px;*/
+
+}
+.banner-ad{
+ margin: 10px;
+ width: 180px;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.search-form-links{
+	text-align: right;
+	margin-top:8px;
+}
+.search-group{
+	float: right;
+}
+.search-bottom-border{
+	margin: 0 auto;
+	border-top: 1px solid #000;
+}
+.search-input{
+	border: 1px solid #fff;
+	width: 80%;
+	float:right;
+	/*border-bottom: 1px solid #000;*/
+}
+.search-icon{
+	float: left;
+}
+.search-form{
+	margin: 0 auto;
+}
+.board-list{
+	list-style-type: none;
+	font-family: Minion Pro Regular;
+	font-size: 16px;
+  font-size: 1rem;
+	width: 46%;
+  padding-left: 10px;
+}
+.list-left{
+	float: left;
+	text-align: right;
+}
+.list-right{
+	float: right;
+	text-align: left;
+}
+
+/* if the screen is 1000px and smaller */
+@media only screen and (max-width: 991px) {
+    .f-t-links{
+    	text-align: center;
+	}
+	.search-form-links{
+		text-align: center;
+		margin-top:8px;
+		word-spacing: 15px;
+	}
+	.search-form {
+		max-width: 40%;
+		text-align: right;
+	}
+	.search-group{
+		float: none;
+	}
+}
+
+@media screen and (max-width: 507px) {
+	.search-form {
+		max-width: 90%;
+	}
+}
+
+@media screen and (min-width: 767px) {
+	.mobile-only {
+		display: none;
+	}
+}
+@media screen and (min-width: 947px) {
+	.affix .nav-header::before {
+	   content: "THE HARVARD ADVOCATE";
+	   float: left;
+	   display: inline-block;
+	   padding: 15px;
+	}
+}
+
+/* Articles */
+
+.article-title{
+  color: black;
+  font-size:50px;
+  margin:40px 0px 0px 0px;
+  letter-spacing: 4px;
+
+}
+.article-author{
+  font-family: Times;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+article p {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  text-indent: 2em;
+}
+
+article span {
+  text-indent: 2em;
+  padding-bottom: .5em;
+}
+
+article.poetry div {
+  text-indent: 2em;
+  margin-left: -2em;
+}
+
+article.poetry h1 {
+  text-align: left;
+}
+
+article.poetry h2 {
+  text-align: left;
+}
+
+article.poetry h3 {
+  text-align: left;
+}
+
+article.poetry p {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+/* Helpers */
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.top-line{
+	font-family: futura;
+	margin-top: 20px;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.header{
+  text-transform: uppercase;
+	letter-spacing: 4px;
+	font-family: futura;
+	padding: 10px;
+	font-size: 22px;
+	padding: 15px;
+	border-bottom: 1px solid #000;
+}
+.subheader{
+  color: #000;
+  text-decoration: none;
+	font-family: futura;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.central-message{
+  font-size: 19px;
+  font-size: 1.2rem;
+  margin: 60px;"
+}
+.subheader-article-name{
+	font-family: Times;
+	text-align: center;
+	margin: 5px 5px 0px 5px;
+	font-size: 16px;
+
+}
+.subheader-article-author{
+	font-family: Times;
+	text-align: center;
+	font-style: italic;
+	margin-top: 0px;
+	font-size: 14px;
+
+}
+.section-article{
+  text-align: center;
+
+}
+.section-article .name{
+  font-family: Times;
+  font-style: italic;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.section-article .author{
+  font-style: normal;
+  margin-bottom: 5px;
+  padding: 0 0 0 5px;
+}
+
+.article-summary{
+	font-family: Times;
+	font-size: 14px;
+  font-size: .9rem;
+}
+.left-border{
+	border-left: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+}
+.art-medium{
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+}
+.advo-navbar{
+	font-family: futura;
+	color: black;
+	margin:0 auto;
+	border: none;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: white;
+	background-image: none;
+	box-shadow: none;
+	border-radius: 0px;
+	text-align:center;
+}
+.centertext{
+	font-family: Minion Pro Regular;
+	font-size: 14px;
+	width: 90%;
+	text-align:center;
+	margin: 0 auto;
+}
+.text{
+	font-family: Minion Pro Regular;
+	font-size: 14px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: .75em auto;
+	max-width: 700px;
+	max-height: 500px;
+}
+
+
+.container{
+	max-width: 900px;
+}
+.center{
+	text-align: center;
+}
+.footer-navbar li{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.copyright{
+	letter-spacing: 2px;
+	font-family: futura;
+	text-align: center;
+	padding: 25px;
+	font-size: 12px;
+}
+
+.subheader-border{
+	letter-spacing: 2px;
+	width:30px;
+	margin-top:5px;
+	margin-bottom:5px;
+	border-top: 1px solid #000;
+}
+.navbar-divider{
+	width:50%;
+	margin-top:5px;
+	margin-bottom:5px;
+	border-top: 1px solid #000;
+}
+.divide-bar{
+	margin-top:15px;
+	margin-bottom:15px;
+	border-top: 1px solid #000;
+}
+.columnWrapper {
+    float: left;
+    width: 100%;
+    min-height: 600px;
+}
+.hide-mobile{
+  display: inline;
+}
+.bottom-ad{
+  border: 2px solid #a1a1a1;
+  padding: 20px;
+  background-color: rgb(239, 239, 239);
+  margin: 5px 45px 5px 45px;
+}
+.sponsored-link{
+  color: gray;
+  text-decoration: none;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+.hide-mobile{
+  display: none;
+}
+
+.main-title{
+	display: none;
+}
+.logo{
+	display: none;
+}
+.nav-header{
+  display: none !important;
+}
+
+.navbar-brand {
+	padding-left: 0px;
+	padding-right: 0px;
+	font-size: 16px;
+}
+
+/* Miscellaneous */
+.btn-150th {
+	color: #000000;
+	background: none;
+	border: 2px solid #000000;
+	border-radius: 0;
+	font-family: 'Futura', sans-serif;
+	text-shadow: none;
+}
+
+.btn-150th:hover, .btn-150th:active, .btn-150th:focus {
+	color: #ffffff;
+	background-color: #000000;
+	border-color: #000000;
+}
+
+

@@ -1,0 +1,29 @@
+{% extends "base_original.html" %}
+
+{% block meta %}
+<title>{{article.title}} | {% for author in article.contributors.all %}{{ author.name }}{% endfor %} | {{article.section}}</title>
+<meta name="author" content="{% for author in article.contributors.all %}{{ author.name }}{% endfor %}">
+<meta name="description" content="{{article.description}}">
+{% endblock %}
+
+{% block content %}
+
+{% load social_share %}
+
+<div class = "container">
+
+    <!-- stylesheet.css has formatting for article p so please don't delete article tags! -->
+    <article class="{{article.section | lower }}">
+    	<h1 class="article-title">{{ article.title }}</h1>
+    	{% for author in article.contributors.all %}
+             <a href="{{ author.get_absolute_url }}" class="no-decoration"> <h2 class="article-author"> {{ author.name }}</h2></a>
+        {% endfor %}
+		<div>{{article.body|safe}}</div>
+	</article>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <h3><div class="addthis_sharing_toolbox"></div></h3>
+
+</div>
+
+{%endblock%}

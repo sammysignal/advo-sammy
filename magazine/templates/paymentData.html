@@ -1,0 +1,106 @@
+<table align="center">
+    <tbody>
+
+    {% if page == "Donate" %}
+     <tr>
+     <div class="form-row">
+
+     <td>
+        <label>
+          <span>Amount ($)</span>
+          </td><td>
+          <input type="text" size="7" name="amount"/>
+        </label>
+      </td>
+      </div>
+      </tr>
+
+    {% endif %}
+    
+      <tr>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Name</span></td>
+
+        <td align="left"><input type="text" size="20" name="name" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Email</span></td>
+
+        <td align="left"><input type="text" size="20" name="email" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Street Address</span></td>
+
+        <td align="left"><input type="text" size="20" name="streetAddress1" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Street Address</span></td>
+
+        <td align="left"><input type="text" size="20" name="streetAddress2" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>City</span></td>
+
+        <td align="left"><input type="text" size="20" name="city" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>State</span></td>
+
+        <td align="left"><input type="text" size="5" name="state" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Country</span></td>
+
+        <td align="left"><input type="text" size="20" name="country" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Zip</span></td>
+
+        <td align="left"><input type="text" size="7" name="zipCode" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Card Number</span></td>
+
+        <td align="left"><input type="text" size="20" data-stripe="number" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>CVC</span></td>
+
+        <td align="left"><input type="text" size="4" data-stripe="cvc" /></td>
+      </tr>
+
+      <tr>
+        <td align="right"><span>Expiration (MM/YYYY)</span></td>
+
+        <td align="left"><input type="text" size="2" data-stripe="exp-month" /> <span>/</span>
+        <input type="text" size="4" data-stripe="exp-year" /></td>
+      </tr>
+     
+      {% if page == "Subscribe" %}
+
+      <tr>
+        <td align="right"><input type="checkbox" name="renew" value="renew" checked=
+        "true" /></td>
+
+        <td align="left"><span>Renew my subscription</span><br /></td>
+      </tr>
+
+      {% endif %}
+
+      <tr>
+        <td align="center" colspan="2"><button type="submit">Submit Payment</button></td>
+      </tr>
+    </tbody>
+  </table>

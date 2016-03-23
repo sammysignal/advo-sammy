@@ -1,0 +1,64 @@
+{% extends "base_original.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!-- <img src="{% static "magazine/images/comm_crop.jpeg" %}" class = "header-image img-responsive" alt="Main Image" > -->
+<div class="container">
+<h1 class="header">CURRENT ISSUE: <a href="{{issue.get_absolute_url}}"> {{issue}} </a></h1>
+
+{% for section, article in sections.items %}
+{% if forloop.counter0|divisibleby:2 %}
+<div class="row">
+{% endif %}
+   <div class="col-md-6">
+      <a href="./{{section}}"><h2 class="subheader">{{section|upper}}</h2></a>
+     <a href="{{ article.get_absolute_url }}" class="no-decoration"> <h4 class="subheader-article-name"> {{article.title}}</h4> </a>
+       {% for author in article.contributors.all %}
+         <a href="{{ author.get_absolute_url }}" class="no-decoration"> <h3 class="subheader-article-author"> {{ author.name }} </h3> </a>
+        {% empty %}
+          <h3 class="subheader-article-author"> No Author </h3>
+       {% endfor %}
+      {% if section == "art" %}
+        <figure class="resize-image" style="margin:auto;">
+        	<!--pass in art image link HERE-->
+    			<img src="{{ MEDIA_URL }}{{article.image.photo|safe}}" class = "img-responsive" alt="Main Image" >
+        </figure>
+      {% else %}            
+      <p class="article-summary"> {{article.teaser|safe}}</p>
+      <p><a class="read-more" href="{{article.get_absolute_url}}">Read More</a></p>
+      {% endif %}
+  </div>
+{% if forloop.counter|divisibleby:2 %}
+</div>
+{% endif %}
+
+{% endfor %}
+  </div>
+  <div class="row">
+     <div class="col-md-6">
+      <article>
+      <a href = "/advertise" class = "sponsored-link"> Sponsored </a>
+        <figure class="resize-image" style="margin:auto;">
+          <!--pass in art image link HERE-->
+          <a href = "https://www.andersonlittle.com"> <img src="/media/ads/andersonlittle.gif" class = "img-responsive" alt="Main Image" > </a>
+        </figure>
+        </article>
+    </div>
+       <div class="col-md-6">
+      <article>
+      <a href = "/advertise" class = "sponsored-link"> Sponsored </a>
+        <figure class="resize-image" style="margin:auto;">
+          <!--pass in art image link HERE-->
+          <a href = "http://ribbedtee.com/f/undershirt-wearing-guide/ "> <img src="/media/ads/ribbed_tee_ad.jpg" class = "img-responsive" alt="Main Image" > </a>
+        </figure>
+              <p class="article-summary"> At  <a href="http://ribbedtee.com/f/undershirt-wearing-guide/" class=""> RibbedTee.com</a> it's our focus to help men look & feel great in their clothes, so we've designed a collection of undershirts to meet every guy's needs</a></p>
+
+        </article>
+    </div>
+  </div>
+
+</div>
+
+
+  {% endblock %}
